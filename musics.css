@@ -37,7 +37,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: blur(15px);
-  color: #fff;
 }
 
 img {
@@ -45,16 +44,15 @@ img {
   object-fit: cover;
   margin-bottom: 25px;
   width: 100%;
-  box-shadow: 0px 0px 10px white;
 }
 
 .player {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   color: #fff;
   border-radius: 30px;
   width: 100%;
-  max-width: 600px; /* Limit width for large screens */
-  padding: 30px 15px;
+  padding: 30px 0px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -64,15 +62,18 @@ img {
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
-  line-height: 1.4;
+  line-height: 16px;
+  color: #fff;
   text-align: center;
-  margin: 10px 0 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .song {
   font-weight: bold;
   font-size: 24px;
-  line-height: 1.2;
+  line-height: 28px;
+  color: #fff;
   margin-bottom: 50px;
   text-align: center;
 }
@@ -80,17 +81,19 @@ img {
 .progress__container {
   background-color: #e4e9ed;
   border-radius: 5px;
-  width: 90%;
-  max-width: 500px;
+  width: 100%;
   height: 10px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
   margin-bottom: 30px;
+  width: 90%;
+  padding-left: 3px;
+  padding-right: 3px;
+  transition: 0.3s;
   box-shadow: 0px 0px 10px white;
 }
-
 .progress {
   background-color: #2b3c5b;
   border-radius: 5px;
@@ -100,8 +103,7 @@ img {
 }
 
 .buttons {
-  width: 90%;
-  max-width: 500px;
+  width: 80%;
   display: flex;
   justify-content: space-between;
 }
@@ -111,7 +113,11 @@ img {
   align-items: center;
   gap: 20px;
   margin-bottom: 20px;
-  width: 100%;
+  width: 80%;
+}
+
+img {
+  box-shadow: 0px 0px 10px white;
 }
 
 .sound-wrapper {
@@ -131,7 +137,6 @@ img {
   font-weight: bold;
   cursor: pointer;
   color: #fff;
-  transition: 0.3s;
 
   &:hover {
     background-color: darkgray;
@@ -162,9 +167,9 @@ span {
 
 .span-wrapper {
   display: flex;
-  justify-content: space-between;
+  gap: 103px;
   margin-bottom: 5px;
-  padding: 0 10px;
+  padding-left: 10px;
 }
 
 .controller {
@@ -172,7 +177,6 @@ span {
   font-size: 40px;
   transition: 0.3s;
 }
-
 .controller:hover {
   transform: scale(1.1);
 }
@@ -181,8 +185,7 @@ span {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  width: 90%;
-  max-width: 500px;
+  width: 88%;
 }
 
 .voise__wrapper {
@@ -197,52 +200,109 @@ span {
   gap: 5px;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   body {
-    font-size: 16px;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .player {
+    padding: 15px;
+    width: 95%;
   }
 
   .title {
-    font-size: 18px;
+    font-size: 17px;
+    margin-bottom: 20px;
   }
 
   .song {
-    font-size: 20px;
+    font-size: 18px;
+    margin-bottom: 35px;
   }
 
   .progress__container {
-    height: 8px;
+    height: 7px;
+    width: 100%;
+    margin-bottom: 30px;
   }
 
   .buttons-wrapper {
+    margin-bottom: 30px;
+    justify-content: center;
     gap: 15px;
   }
 
-  .controller {
-    font-size: 35px;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    font-size: 16px;
-  }
-
-  .song {
-    font-size: 18px;
-  }
-
-  .buttons-wrapper {
-    flex-direction: column;
-    gap: 10px;
+  .range {
+    width: 160px;
   }
 
   .controller {
     font-size: 30px;
+    margin: 5px 0;
+  }
+
+  .time {
+    font-size: 13px;
+  }
+
+.buttons {
+  margin-bottom: 30px;
+}
+
+  .speed-audio {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .player {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .song {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .progress__container {
+    height: 6px;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .controller {
+    font-size: 25px;
   }
 
   .range {
-    width: 150px;
+    width: 140px;
+  }
+
+  .time {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .speed-audio {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
