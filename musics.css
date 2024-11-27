@@ -266,13 +266,13 @@ span {
   }
 
   .title {
-    font-size: 16px;
+    font-size: 22px;
     margin-top: 10px;
     margin-bottom: 20px;
   }
 
   .song {
-    font-size: 16px;
+    font-size: 22px;
     margin-bottom: 25px;
   }
 
@@ -300,6 +300,10 @@ span {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 30px;
+  }
+
+  .buttons-wrapper {
+    margin-bottom: 22px;
   }
 
   .speed-audio {
