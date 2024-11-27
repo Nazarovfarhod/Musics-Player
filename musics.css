@@ -191,10 +191,6 @@ span {
   gap: 7px;
 }
 
-.volume-value {
-  width: 150px;
-}
-
 .input__wrapper {
   display: flex;
   align-items: center;
